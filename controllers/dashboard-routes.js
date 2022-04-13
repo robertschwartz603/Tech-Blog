@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const {
+    Post,
+    User,
+    Comment
+} = require('../models');
 const withAuth = require('../utils/auth');
 
 //dashboard - ALL posts functionality
@@ -15,8 +19,8 @@ router.get('/', withAuth, (req, res) => {
             'title',
             'description',
             'created_at'
-        ], include: [
-            {
+        ],
+        include: [{
                 model: Comment,
                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
@@ -29,11 +33,16 @@ router.get('/', withAuth, (req, res) => {
                 attributes: ['username']
             }
         ]
-    }) .then(dbPostData => {
-        const posts = dbPostData.map(post => post.get({ plain: true }));
+    }).then(dbPostData => {
+        const posts = dbPostData.map(post => post.get({
+            plain: true
+        }));
         console.log(posts);
-        res.render('dashboard', { posts, loggedIn: true });
-    }) .catch(err => {
+        res.render('dashboard', {
+            posts,
+            loggedIn: true
+        });
+    }).catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
@@ -47,8 +56,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
             'title',
             'description',
             'created_at'
-        ], include: [
-            {
+        ],
+        include: [{
                 model: Comment,
                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
@@ -61,9 +70,11 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 attributes: ['username']
             }
         ]
-    }) .then(dbPostData => {
+    }).then(dbPostData => {
         if (dbPostData) {
-            const post = dbPostData.get({ plain: true });
+            const post = dbPostData.get({
+                plain: true
+            });
 
             res.render('edit-post', {
                 post,
@@ -72,7 +83,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         } else {
             res.status(404).end();
         }
-    }) .catch(err => {
+    }).catch(err => {
         res.status(500).json(err);
     });
 });

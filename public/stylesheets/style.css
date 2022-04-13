@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(199, 199, 199);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+  nav {
+    display: flex;
+    padding: 30px 30px 5px 7px;
+  }
+
+  
+  .nav-link {
+    margin-right: 15px;
+  }
+  
+  .title-container h1 {
+    background-color: rgb(201, 211, 201);
+    color: rgb(27, 66, 73);
+    display: flex;
+
+    border-radius: 1px;
+  }
+
+  #logout {
+    all: unset;
+  }
+
+  a, #logout {
+    text-decoration: none;
+    color: rgb(190, 208, 213);
+    font-weight: bold;
+    transition: color .1s;
+  }
+
+  a:hover {
+    color: rgb(162, 174, 186);
+  }
+  
+  
+  #submit {
+    border: grey;
+    background-color: grey;
+    color: rgba(222, 213, 213, 0.872);
+    width: 100%;
+    margin: 5px;
+  } 
+
+  #signup-instead {
+    color: rgb(235, 225, 225);
+  }
+
+  #signup-instead:hover {
+    background-color: #3486eb;
+  }
+
+  .user-info {
+    float: right;
+  }
+
+  button:not(.logout) {
+    background-color: rgb(190, 213, 213);
+    border: 0;
+    padding: 1%;
+    color: rgb(23, 35, 41);
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  
+  button:hover {
+    background-color: rgb(190, 213, 190);
+  }
+
+  .post-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  
+  textarea, input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    width: 100%;
+  }
+
+  
+  textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid #348ceb;
+  }
+
+  
+  textarea {
+    min-width: 40%;
+    min-height: 100px;
+  }
+
+  .form-box {
+    border: solid;
+    padding: 10px;
+  }
+
+  h2 {
+    background-color: rgb(23, 30, 41);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0;
+  }
+
+  form > div {
+    margin-bottom: 2%;
+  }
+  
+  form label {
+    display: block;
+  }
+  
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: rgb(23, 30, 41);
+    border-bottom: 1px solid rgb(253, 254, 255);
+    padding: 0 1%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+
+  .delete-post-btn {
+    background-color: #d41414;
+  }
+
+  .delete-post-btn:hover {
+    background-color: #ff643d;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .post {
+    margin-bottom: 2%;
+    line-height: 150%;
+    border: solid;
+    padding: 10px;
+  }
+
+  .post .title {
+    background-color: rgb(23, 41, 41);
+    color: rgb(181, 181, 181);
+    padding: 10px;
+  }
+
+  .post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #a5a5a5;
+  }
+
+  .edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+    color: black;
+  }
+
+  .upvote-btn {
+    background-color: #2b5e27;
+    transition: background-color .1s;
+  }
+
+  .upvote-btn:hover {
+    background-color: #1f9114;
+  }
+
+  .comments a {
+    color: black;
+    font-weight: normal;
+  }
+
+  .comment-form {
+    margin-bottom: 5%;
+  }
+
+  #comment-form {
+    border-top: 35px solid black;
+  }
+
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .comment:nth-child(odd) {
+    background-color: #233145;
+  }
+
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+  }
+
+  .edit-post-form {
+    margin-bottom: 5%;
+  }
+
+  footer {
+    border-top: 1px solid rgb(179, 177, 177);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
